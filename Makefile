@@ -8,20 +8,20 @@ ifeq (test_group,$(firstword $(MAKECMDGOALS)))
 endif
 
 build:
-	docker compose build
+	docker-compose build
 
 up:
-	docker compose up -d
+	docker-compose up -d
 
 down:
-	docker compose down --volumes --remove-orphans
+	docker-compose down --volumes --remove-orphans
 
 install:
-	docker compose run --rm php composer install -d /var/www
-	docker compose run --rm php php /var/www/init --env=Development --overwrite=All
+	docker-compose run --rm php composer install -d /var/www
+	docker-compose run --rm php php /var/www/init --env=Development --overwrite=All
 
 test_group:
-	docker compose exec php vendor/bin/codecept run -g $(RUN_ARGS)
+	docker-compose exec php vendor/bin/codecept run -g $(RUN_ARGS)
 
 test_clean:
 	rm -rf tests/_output/*
