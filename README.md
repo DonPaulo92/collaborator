@@ -2,6 +2,12 @@
 
 REST API на Yii2 для обчислення суми парних чисел з масиву.
 
+## Завантажити
+```bash
+https://github.com/DonPaulo92/collaborator.git
+cd collaborator - перейті в папку проєкту
+```
+
 ## Встановлення
 
 Швидко встановити
