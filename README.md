@@ -76,17 +76,6 @@ curl -X POST http://localhost:8000/api/sum-even \
 }
 ```
 
-**Відповідь з помилкою:**
-```json
-{
-    "status": "error",
-    "errors": {
-        "numbers": ["Each number must be a strict integer."]
-    },
-    "code": 400
-}
-```
-
 ## Архітектура
 1. **Контролер** (`SumController`) - обробляє HTTP запити
 2. **Форма** (`EventSumForm`) - валідація даних
