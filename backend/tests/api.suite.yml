@@ -1,0 +1,12 @@
+suite_namespace: backend\tests
+actor: UnitTester
+modules:
+  enabled:
+    - REST:
+        url: http://localhost/
+        depends: Yii2
+    - \backend\tests\Helper\Functional
+    - Filesystem
+    - Asserts
+  config:
+    - Yii2

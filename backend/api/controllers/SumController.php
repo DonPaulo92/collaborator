@@ -2,7 +2,7 @@
 
 namespace backend\api\controllers;
 
-use backend\models\Sum\forms\EventSumForm;
+use backend\models\Sum\forms\EvenSumForm;
 use common\dto\NumbersDTO;
 use common\services\SumService;
 use Yii;
@@ -12,7 +12,7 @@ class SumController extends BaseController
     public function actionEvenSum()
     {
         $post = Yii::$app->request->post();
-        $form = new EventSumForm();
+        $form = new EvenSumForm();
         $form->load($post, '');
 
         if (!$form->validate()) {

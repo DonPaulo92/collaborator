@@ -1,2 +1,8 @@
-suite_namespace: backend\tests\unit
+suite_namespace: backend\tests
 actor: UnitTester
+modules:
+  enabled:
+    - Asserts
+    - Yii2
+    - \backend\tests\Helper\Unit
+  step_decorators: ~

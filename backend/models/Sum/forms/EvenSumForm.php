@@ -4,7 +4,7 @@ namespace backend\models\Sum\forms;
 
 use yii\base\Model;
 
-class EventSumForm extends Model
+class EvenSumForm extends Model
 {
     public const SCENARIO_FORM = 'sum_event_sum';
 
@@ -16,9 +16,6 @@ class EventSumForm extends Model
         $this->setScenario(self::SCENARIO_FORM);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function rules(): array
     {
         return

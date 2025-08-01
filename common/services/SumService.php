@@ -3,18 +3,10 @@
 namespace common\services;
 
 use common\dto\NumbersDTO;
+use common\interfaces\SumInterface;
 
-/**
- * Сервис для работы с суммами
- */
-class SumService
+class SumService implements SumInterface
 {
-    /**
-     * Вычисляет сумму четных чисел
-     * 
-     * @param NumbersDTO $dto
-     * @return int
-     */
     public function sumNumbers(NumbersDTO $dto): int
     {
         $evenNumbers = array_filter($dto->numbers, function($num) {

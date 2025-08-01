@@ -95,10 +95,15 @@ curl -X POST http://localhost:8000/api/sum-even \
 4. **Інтерфейс** (`SumServiceInterface`) - інтерфейс для сервісу** 
 
 ## Команди Makefile
-
 - `make build` - зібрати Docker образи
 - `make up` - запустити контейнери
 - `make down` - зупинити контейнери
 - `make install` - встановити залежності
 - `make reinstall` - встановити залежності знову`
+- `make test_group` - тести`
+- 
+## Команди для тестування
+- `make test_group api-sum-controller-action-enum-sum` - тест контроллера
+- `make test_group unit-models-even-sum-form` - тест форми
+- `make test_group unit-services-sum-service` - тест сервіса
 
