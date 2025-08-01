@@ -58,13 +58,6 @@ curl -X POST http://localhost:8000/api/sum-even \
   -d '{"numbers": [1, 2, 3, 4, 5, 6]}'
 ```
 
-**Відповідь:**
-```json
-{
-    "sum": 12
-}
-```
-
 #### Запит з помилкою:
 ```bash
 curl -X POST http://localhost:8000/api/sum-even \
