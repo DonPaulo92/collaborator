@@ -58,6 +58,20 @@ curl -X POST http://localhost:8000/api/sum-even \
   -d '{"numbers": [1, 2, 3, 4, 5, 6]}'
 ```
 
+**Відповідь:**
+```json
+{
+    "sum": 12
+}
+```
+
+#### Запит з помилкою:
+```bash
+curl -X POST http://localhost:8000/api/sum-even \
+  -H "Content-Type: application/json" \
+  -d '{"numbers": [1, 2, 3, 4, 5, "6"]}'
+```
+
 **Відповідь з помилкою:**
 ```json
 {
@@ -69,10 +83,15 @@ curl -X POST http://localhost:8000/api/sum-even \
 }
 ```
 
-### Тестування API
-
-```bash
-make api-test
+**Відповідь з помилкою:**
+```json
+{
+    "status": "error",
+    "errors": {
+        "numbers": ["Each number must be a strict integer."]
+    },
+    "code": 400
+}
 ```
 
 ## Архітектура
